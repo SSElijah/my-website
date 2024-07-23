@@ -1,0 +1,72 @@
+:root {
+    --black-color--: rgb(34, 34, 34);
+}
+/* UNIVERSAL SELECTOR */
+
+
+* {
+    /* RGB: 0 - 255. 0-100%  */
+    /* Hexadecimal */
+    color: rgb(75, 14, 5)
+}
+
+
+/*TYPE SELECTOR */
+q {
+    color: rgb(60, 83, 7);
+}
+
+ul {
+    color:rgb(0, 51, 34)
+}
+
+
+
+
+img {
+    float: left;
+    margin-right: 1em;
+}
+
+#section_1 {
+    clear: left;
+}
+
+p {
+    line-height: 1em;
+    font-size: 99%;
+}
+
+/* ID SELECTOR */
+
+
+/* CLASS SELECTOR */
+
+ul {
+    font-weight: bold;
+}
+
+/* RELATIONAL SELECTOR */
+section#section_2>ol>li {
+    color: var(--black-color--)
+}
+
+main em {
+    color: rgb(11, 37, 29);
+}
+
+
+section#section_2 a:visited {
+    font-size: 200%;
+    color: blueviolet;
+}
+
+section#section_2 a:hover {
+    font-size: 200%;
+    color: darkcyan;
+    font-family: serif;
+}
+
+h1, h2, h3 {
+    color: var(--black-color--)
+}
