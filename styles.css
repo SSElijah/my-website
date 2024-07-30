@@ -1,13 +1,14 @@
 :root {
-    --black-color--: rgb(34, 34, 34);
+    --black-color: rgb(34, 34, 34);
 }
+
 /* UNIVERSAL SELECTOR */
 
 
 * {
     /* RGB: 0 - 255. 0-100%  */
     /* Hexadecimal */
-    color: rgb(75, 14, 5)
+    color: rgb(0, 0, 0)
 }
 
 
@@ -17,7 +18,7 @@ q {
 }
 
 ul {
-    color:rgb(0, 51, 34)
+    color: rgb(0, 51, 34)
 }
 
 
@@ -28,8 +29,30 @@ img {
     margin-right: 1em;
 }
 
-#section_1 {
+br {
     clear: left;
+}
+
+#section_1 {
+
+    float: left;
+    width: 450px;
+}
+
+
+#section_2 {
+    float: left;
+    width: 450px;
+
+}
+
+#blabla {
+    float: right;
+    width: 450px;
+}
+
+footer {
+    clear: both;
 }
 
 p {
@@ -67,6 +90,52 @@ section#section_2 a:hover {
     font-family: serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--black-color--)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+#red {
+    background: linear-gradient(to right, #9b4444, #ec38a757);
+    color: white;
+    border: 2px solid black;
+}
+
+#green {
+    background-color: #a7ffa7;
+    color: white;
+}
+
+#blue {
+    background-color: #a1a1ff;
+    color: white;
+}
+
+article {
+    margin: 0;
+    padding: 0;
+    border: 2px dashed rgb(73, 47, 13);
 }
