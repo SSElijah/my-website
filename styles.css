@@ -3,26 +3,21 @@
 }
 
 /* UNIVERSAL SELECTOR */
-
-
 * {
-    /* RGB: 0 - 255. 0-100%  */
-    /* Hexadecimal */
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-
-/*TYPE SELECTOR */
+/* TYPE SELECTOR */
 q {
     color: rgb(60, 83, 7);
 }
 
 ul {
-    color: rgb(0, 51, 34)
+    color: rgb(0, 51, 34);
 }
-
-
-
 
 img {
     float: left;
@@ -33,22 +28,12 @@ br {
     clear: left;
 }
 
-#section_1 {
-
-    float: left;
-    width: 450px;
-}
-
-
-#section_2 {
-    float: left;
-    width: 450px;
-
-}
-
+#section_1,
+#section_2,
 #blabla {
-    float: right;
-    width: 450px;
+    float: left;
+    width: 100%;
+    padding: 1%;
 }
 
 footer {
@@ -56,28 +41,25 @@ footer {
 }
 
 p {
-    line-height: 1em;
-    font-size: 99%;
+    line-height: 1.5em;
+    font-size: 1rem;
 }
 
 /* ID SELECTOR */
 
-
 /* CLASS SELECTOR */
-
 ul {
     font-weight: bold;
 }
 
 /* RELATIONAL SELECTOR */
 section#section_2>ol>li {
-    color: var(--black-color--)
+    color: var(--black-color--);
 }
 
 main em {
     color: rgb(11, 37, 29);
 }
-
 
 section#section_2 a:visited {
     font-size: 200%;
@@ -93,29 +75,21 @@ section#section_2 a:hover {
 h1,
 h2,
 h3 {
-    color: var(--black-color--)
+    color: var(--black-color--);
+    margin-bottom: 1em;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .container {
     display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
 }
 
 .column {
-    flex: 1;
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, and flex-basis */
     padding: 10px;
-    box-sizing: border-box;
     font-size: large;
+    min-width: 250px;
 }
 
 #red {
@@ -138,4 +112,98 @@ article {
     margin: 0;
     padding: 0;
     border: 2px dashed rgb(73, 47, 13);
+}
+
+/* Scalable Image */
+
+/* this makes the picture shirk or expand the page */
+.scalable-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation Menu*/
+
+/* This is all the content styles on the top bar (navigation menu) to access the other pages*/
+nav {
+    background-color: var(--black-color);
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: darkcyan;
+}
+
+nav ul li a:active {
+    background-color: blueviolet;
+}
+
+/* Media Queries (i needed to use outside sources to assist with this, probably the most challenging info to understand) */
+
+/* Tablets and larger screens (768px and above) */
+@media screen and (max-width: 768px) {
+    #section_1, #section_2, #blabla {
+        float: none;
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        float: none;
+        display: inline-block;
+    }
+}
+
+/* Mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 10px 0;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+
+    .column {
+        padding: 5px;
+        font-size: medium;
+    }
 }
