@@ -31,7 +31,6 @@ br {
 #section_1,
 #section_2,
 #blabla {
-    float: left;
     width: 100%;
     padding: 1%;
 }
@@ -81,7 +80,8 @@ h3 {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     padding: 1%;
 }
 
@@ -116,15 +116,15 @@ article {
 
 /* Scalable Image */
 
-/* this makes the picture shirk or expand the page */
+/* this makes the picture shrink or expand the page */
 .scalable-image {
     max-width: 100%;
     height: auto;
 }
 
-/* Navigation Menu*/
+/* Navigation Menu */
 
-/* This is all the content styles on the top bar (navigation menu) to access the other pages*/
+/* This is all the content styles on the top bar (navigation menu) to access the other pages */
 nav {
     background-color: var(--black-color);
     overflow: hidden;
@@ -159,12 +159,11 @@ nav ul li a:active {
     background-color: blueviolet;
 }
 
-/* Media Queries (i needed to use outside sources to assist with this, probably the most challenging info to understand) */
+/* Media Queries */
 
 /* Tablets and larger screens (768px and above) */
 @media screen and (max-width: 768px) {
     #section_1, #section_2, #blabla {
-        float: none;
         width: 100%;
     }
 
@@ -206,4 +205,48 @@ nav ul li a:active {
         padding: 5px;
         font-size: medium;
     }
+}
+
+/* Grid Layout Styles */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    height: 100vh; 
+    width: 100vw; 
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--black-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 1px solid #e0e0e0;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
