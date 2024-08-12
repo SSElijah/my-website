@@ -1,252 +1,145 @@
-:root {
-    --black-color: rgb(34, 34, 34);
-}
-
-/* UNIVERSAL SELECTOR */
-* {
-    color: rgb(0, 0, 0);
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Modern, readable font */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    background-color: #f4f4f4; /* Light background for readability */
+    color: #333; /* Dark text for contrast */
 }
 
-/* TYPE SELECTOR */
-q {
-    color: rgb(60, 83, 7);
-}
-
-ul {
-    color: rgb(0, 51, 34);
-}
-
-img {
-    float: left;
-    margin-right: 1em;
-}
-
-br {
-    clear: left;
-}
-
-#section_1,
-#section_2,
-#blabla {
-    width: 100%;
-    padding: 1%;
-}
-
-footer {
-    clear: both;
-}
-
-p {
-    line-height: 1.5em;
-    font-size: 1rem;
-}
-
-/* ID SELECTOR */
-
-/* CLASS SELECTOR */
-ul {
-    font-weight: bold;
-}
-
-/* RELATIONAL SELECTOR */
-section#section_2>ol>li {
-    color: var(--black-color--);
-}
-
-main em {
-    color: rgb(11, 37, 29);
-}
-
-section#section_2 a:visited {
-    font-size: 200%;
-    color: blueviolet;
-}
-
-section#section_2 a:hover {
-    font-size: 200%;
-    color: darkcyan;
-    font-family: serif;
-}
-
-h1,
-h2,
-h3 {
-    color: var(--black-color--);
-    margin-bottom: 1em;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1%;
-}
-
-.column {
-    flex: 1 1 30%; /* Flex-grow, flex-shrink, and flex-basis */
-    padding: 10px;
-    font-size: large;
-    min-width: 250px;
-}
-
-#red {
-    background: linear-gradient(to right, #9b4444, #ec38a757);
+/* Header Styles */
+header {
+    background-image: url(images/Ocean.jpg);
     color: white;
-    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
 }
 
-#green {
-    background-color: #a7ffa7;
-    color: white;
-}
-
-#blue {
-    background-color: #a1a1ff;
-    color: white;
-}
-
-article {
-    margin: 0;
-    padding: 0;
-    border: 2px dashed rgb(73, 47, 13);
-}
-
-/* Scalable Image */
-
-/* this makes the picture shrink or expand the page */
-.scalable-image {
-    max-width: 100%;
+header img {
+    border-radius: 50%; /* Rounded profile picture */
+    margin-top: 15px;
+    max-width: 300px;
     height: auto;
 }
 
-/* Navigation Menu */
+header h1, header h2, header h3 {
+    margin: 10px 0;
+}
 
-/* This is all the content styles on the top bar (navigation menu) to access the other pages */
+header h1 {
+    font-size: 2.5em; /* Larger heading */
+}
+
+header h2 {
+    font-size: 1.8em; /* Medium heading */
+}
+
+header h3 {
+    font-size: 1.2em; /* Smaller heading */
+}
+
+/* Navigation Styles */
 nav {
-    background-color: var(--black-color);
-    overflow: hidden;
+    background-color: #333; /* Dark background for the nav */
+    padding: 10px;
+    text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 nav ul li {
-    flex: 1 1 auto;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: darkcyan;
+    background-color: #555; /* Darker background on hover */
+    color: rgb(37, 178, 243); /* Green text on hover */
 }
 
-nav ul li a:active {
-    background-color: blueviolet;
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Media Queries */
-
-/* Tablets and larger screens (768px and above) */
-@media screen and (max-width: 768px) {
-    #section_1, #section_2, #blabla {
-        width: 100%;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        float: none;
-        display: inline-block;
-    }
+main p {
+    line-height: 1.6; /* Improve readability */
 }
 
-/* Mobile devices (480px and below) */
-@media screen and (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+.center-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sections-warper {
+    width: 100%;
+    max-width: 800px;
+}
+
+#sections {
+    margin-top: 20px;
+}
+
+section {
+    background-color: #fff; /* White background for sections */
+    border: 1px solid #ddd; /* Light border */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+section h2 {
+    font-size: 1.5em; /* Heading size */
+    margin-bottom: 15px;
+}
+
+section ul, section ol {
+    padding-left: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background for the footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid #4ebeff; /* Green top border */
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
     }
 
-    nav ul li {
-        width: 100%;
-    }
-
-    nav ul li a {
-        padding: 10px 0;
-    }
-
-    h1, h2, h3 {
+    header h2 {
         font-size: 1.5em;
     }
 
-    p {
+    header h3 {
         font-size: 1em;
-        line-height: 1.2em;
     }
 
-    .column {
-        padding: 5px;
-        font-size: medium;
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
-}
-
-/* Grid Layout Styles */
-.grid-container {
-    display: grid;
-    grid-template-areas:
-        "header header"
-        "sidebar main"
-        "footer footer";
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto 1fr auto;
-    gap: 10px;
-    height: 100vh; 
-    width: 100vw; 
-}
-
-.header {
-    grid-area: header;
-    background-color: var(--black-color);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-
-.main {
-    grid-area: main;
-    background-color: #ffffff;
-    padding: 20px;
-    border-left: 1px solid #e0e0e0;
-}
-
-.footer {
-    grid-area: footer;
-    background-color: #333333;
-    color: white;
-    padding: 20px;
-    text-align: center;
 }

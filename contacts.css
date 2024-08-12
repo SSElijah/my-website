@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Light background color for better contrast */
+    color: #333; /* Dark text color for readability */
+    background-image: url(images/galaxy.jpg);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: #000000; /* Green background for the header */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #333; /* Darker bottom border */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header nav {
+    margin-bottom: 20px;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header nav ul li {
+    margin: 0 15px; /* Increase spacing between items */
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; /* Larger padding for better click area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    font-weight: bold; /* Bold text */
+}
+
+.header nav ul li a:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #4CAF50; /* Green text on hover */
+}
+
+/* Images */
+.header-image, .footer-image {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: 300px;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.column {
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2em;
+}
+
+.column-1 {
+    background-color: #ff7b00; 
+}
+
+.column-2 {
+    background-color: #6a79ff; 
+}
+
+.column-3 {
+    background-color: #00fd15; 
+}
+
+.conclusion {
+    padding: 40px;
+    background-color: #fff; 
+    border-top: 1px solid #ddd; 
+    margin: 40px 0; /* Increase margin to give more space around the box */
+    border-radius: 8px; 
+    max-width: 1000px; 
+    width: 100%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    font-size: 1.2em;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid #4CAF50; /* Green top border */
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-bottom: 20px;
+    }
+
+    .header-image, .footer-image {
+        max-width: 80%;
+    }
+}
+
+

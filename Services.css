@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+   background-image: url(images/Ocean\ 2.jpg);
+   background-size: cover;
+    color: #333;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header ul li {
+    margin: 0 15px;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Images */
+.scalable-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+    float: left;
+}
+
+/* Main Content */
+.main {
+    grid-area: main;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main h1, .main h2 {
+    color: #333;
+}
+
+.main h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.main h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: rgb(71, 71, 71);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
