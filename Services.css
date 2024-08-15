@@ -112,3 +112,90 @@ body {
 .footer p {
     margin: 0;
 }
+
+
+/* Responsive Styles UPDATED */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+            "header header header"
+            "main main main"
+            "sidebar sidebar sidebar"
+            "footer footer footer";
+        grid-gap: 15px;
+    }
+
+    .header ul {
+        flex-direction: column;
+    }
+
+    .header ul li {
+        margin-bottom: 10px;
+    }
+
+    .main {
+        font-size: 1em;
+    }
+
+    .sidebar {
+        text-align: center;
+    }
+
+    .scalable-image {
+        max-width: 80%;
+        float: none;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+
+    .header ul li a {
+        font-size: 0.9em;
+    }
+
+    .main h1 {
+        font-size: 1.5em;
+    }
+
+    .main h2 {
+        font-size: 1.2em;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .scalable-image {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        padding: 10px;
+    }
+
+    .header ul li a {
+        font-size: 0.8em;
+    }
+
+    .main h1 {
+        font-size: 1.2em;
+    }
+
+    .main h2 {
+        font-size: 1em;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+
+    .scalable-image {
+        max-width: 100%;
+    }
+}

@@ -59,7 +59,7 @@ body {
 
 .header nav ul li a:hover {
     background-color: #333; /* Dark background on hover */
-    color: #4CAF50; /* Green text on hover */
+    color: #1c43c2; /* Green text on hover */
 }
 
 /* Images */
@@ -124,7 +124,7 @@ body {
     margin-top: 20px;
 }
 
-/* Responsive Styles */
+/* Responsive Styles UPDATED 8-15 ASSIGHMENT FOR CRITICISM ------ also lowered some of the dimentions by 1.0 */
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
@@ -135,7 +135,67 @@ body {
     }
 
     .header-image, .footer-image {
-        max-width: 80%;
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.4em;
+    }
+
+    .header nav ul li {
+        margin: 0 10px;
+    }
+
+    .header nav ul li a {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+
+    .column {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .conclusion {
+        padding: 20px;
+        font-size: 0.9em;
+        margin: 20px 0;
+    }
+
+    .header-image, .footer-image {
+        height: 190px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header h1 {
+        font-size: 1.1em;
+    }
+
+    .header nav ul li {
+        margin: 0 4px;
+    }
+
+    .header nav ul li a {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    .column {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .conclusion {
+        padding: 15px;
+        font-size: 0.9em;
+        margin: 15px 0;
+    }
+
+    .header-image, .footer-image {
+        height: 140px;
     }
 }
 

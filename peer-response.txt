@@ -1,0 +1,13 @@
+Taylor's criticism
+
+"Your home page on mobile loads very well, but the 3 companion pages load up a bit zoomed in."
+
+I was able to go to teh contacts page and readjust the pixel ratios by 1.0 to make a small difference, I cant see what the other peoples' browsers look like so hopefully this looks correct now.
+
+
+
+
+"Also on mobile, Companions 1 and 2, the side bar stays disproportionately large in comparison to the companion images."
+
+
+I was able to add the proper responsive styles to my css making it so there are no weird size errors. At least it looks normal on my end.
